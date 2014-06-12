@@ -1,0 +1,67 @@
+Name         : kde5-cli-tools
+Version      : 5.0.0
+Release      : 1
+Group        : System/Base
+License      : GPLv2+
+Summary      : Tools based on KDE Frameworks 5 to better interact with the system
+Description  : |
+  Tools based on KDE Frameworks 5 to better interact with the system.
+URL          : http://www.kde.org
+SetupOptions : -q -n %{name}-%{version}/upstream
+
+Sources:
+    - "%{name}-%{version}.tar.xz"
+
+RpmLintIgnore:
+    - devel-file-in-non-devel-package
+    - no-changelogname-tag
+    - library-without-ldconfig-postin
+    - library-without-ldconfig-postun
+
+Configure    : none
+Builder      : none
+
+PkgBR:
+    - kde5-rpm-macros
+    - extra-cmake-modules
+    - kf5-kconfig-devel
+    - kf5-kcmutils-devel
+    - kf5-kdesu-devel
+    - kf5-kdelibs4support-devel
+PkgConfigBR:
+    - Qt5Core
+    - Qt5DBus
+    - Qt5Xml
+    - Qt5Network
+    - Qt5Gui
+    - Qt5Widgets
+    - Qt5Concurrent
+    - Qt5Test
+    - Qt5Svg
+    - Qt5X11Extras
+Requires:
+    - kde5-filesystem
+
+RequiresPost:
+    - /sbin/ldconfig
+RequiresPostUn:
+    - /sbin/ldconfig
+
+Files:
+    - "%{_kde5_bindir}/kcmshell5"
+    - "%{_kde5_bindir}/kde-open5"
+    - "%{_kde5_bindir}/kdecp5"
+    - "%{_kde5_bindir}/kdemv5"
+    - "%{_kde5_bindir}/keditfiletype5"
+    - "%{_kde5_bindir}/kioclient5"
+    - "%{_kde5_bindir}/kmimetypefinder5"
+    - "%{_kde5_bindir}/kstart5"
+    - "%{_kde5_bindir}/ksvgtopng5"
+    - "%{_kde5_bindir}/ktraderclient5"
+    - "%{_kde5_libdir}/libkdeinit5_kcmshell5.so"
+    - "%{_kde5_plugindir}/kcm_filetypes.so"
+    - "%{_kde5_libexecdir}/kdeeject"
+    - "%{_kde5_libexecdir}/kdesu"
+    - "%{_datadir}/doc/HTML/en/kdesu"
+    - "%{_datadir}/kservices5/filetypes.desktop"
+    - "%{_datadir}/man/man1/kdesu.1.gz"
