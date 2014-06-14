@@ -9,7 +9,7 @@ Name:       kde5-cli-tools
 # << macros
 
 Summary:    Tools based on KDE Frameworks 5 to better interact with the system
-Version:    5.0.0
+Version:    4.100.0
 Release:    1
 Group:      System/Base
 License:    GPLv2+
