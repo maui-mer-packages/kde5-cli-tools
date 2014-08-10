@@ -1,5 +1,5 @@
-Name         : kde5-cli-tools
-Version      : 4.100.0
+Name         : kde-cli-tools
+Version      : 5.0.0
 Release      : 1
 Group        : System/Base
 License      : GPLv2+
@@ -22,12 +22,12 @@ Configure    : none
 Builder      : none
 
 PkgBR:
-    - kde5-rpm-macros
+    - kf5-rpm-macros
     - extra-cmake-modules
-    - kf5-kconfig-devel
-    - kf5-kcmutils-devel
-    - kf5-kdesu-devel
-    - kf5-kdelibs4support-devel
+    - kconfig-devel
+    - kcmutils-devel
+    - kdesu-devel
+    - kdelibs4support-devel
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
@@ -41,7 +41,7 @@ PkgConfigBR:
     - Qt5X11Extras
     - Qt5PrintSupport
 Requires:
-    - kde5-filesystem
+    - kf5-filesystem
 
 RequiresPost:
     - /sbin/ldconfig
@@ -49,20 +49,20 @@ RequiresPostUn:
     - /sbin/ldconfig
 
 Files:
-    - "%{_kde5_bindir}/kcmshell5"
-    - "%{_kde5_bindir}/kde-open5"
-    - "%{_kde5_bindir}/kdecp5"
-    - "%{_kde5_bindir}/kdemv5"
-    - "%{_kde5_bindir}/keditfiletype5"
-    - "%{_kde5_bindir}/kioclient5"
-    - "%{_kde5_bindir}/kmimetypefinder5"
-    - "%{_kde5_bindir}/kstart5"
-    - "%{_kde5_bindir}/ksvgtopng5"
-    - "%{_kde5_bindir}/ktraderclient5"
-    - "%{_kde5_libdir}/libkdeinit5_kcmshell5.so"
-    - "%{_kde5_plugindir}/kcm_filetypes.so"
-    - "%{_kde5_libexecdir}/kdeeject"
-    - "%{_kde5_libexecdir}/kdesu"
-    - "%{_datadir}/doc/HTML/en/kdesu"
-    - "%{_datadir}/kservices5/filetypes.desktop"
-    - "%{_datadir}/man/man1/kdesu.1.gz"
+    - "%{_kf5_bindir}/kcmshell5"
+    - "%{_kf5_bindir}/kde-open5"
+    - "%{_kf5_bindir}/kdecp5"
+    - "%{_kf5_bindir}/kdemv5"
+    - "%{_kf5_bindir}/keditfiletype5"
+    - "%{_kf5_bindir}/kioclient5"
+    - "%{_kf5_bindir}/kmimetypefinder5"
+    - "%{_kf5_bindir}/kstart5"
+    - "%{_kf5_bindir}/ksvgtopng5"
+    - "%{_kf5_bindir}/ktraderclient5"
+    - "%{_kf5_libdir}/libkdeinit5_kcmshell5.so"
+    - "%{_kf5_plugindir}/kcm_filetypes.so"
+    - "%{_kf5_libdir}/libexec/kdeeject"
+    - "%{_kf5_libdir}/libexec/kdesu"
+    - "%{_kf5_htmldir}/en/kdesu"
+    - "%{_kf5_servicesdir}/filetypes.desktop"
+    - "%{_mandir}/man1/kdesu.1.gz"
