@@ -43,7 +43,7 @@ Tools based on KDE Frameworks 5 to better interact with the system.
 
 
 %prep
-%setup -q -n %{name}-%{version}/upstream
+%setup -q -n %{name}-%{version}
 
 # >> setup
 # << setup

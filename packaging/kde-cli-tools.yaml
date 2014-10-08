@@ -7,7 +7,6 @@ Summary      : Tools based on KDE Frameworks 5 to better interact with the syste
 Description  : |
   Tools based on KDE Frameworks 5 to better interact with the system.
 URL          : http://www.kde.org
-SetupOptions : -q -n %{name}-%{version}/upstream
 
 Sources:
     - "%{name}-%{version}.tar.xz"
